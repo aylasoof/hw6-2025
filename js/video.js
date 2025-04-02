@@ -53,11 +53,13 @@ document.querySelector("#mute").addEventListener("click", function(){
 	}
 });
 
-document.querySelector ("#slider").addEventListener("change", function(){
-	console.log("volume changed");
-	document.getElementById("volume").textContent = slider.value+"%";
-	console.log("The current value is " + (slider.value / 100));
+document.querySelector("#slider").addEventListener("change", function() {
+    console.log("volume changed");
+    document.getElementById("player1").volume = document.querySelector("#slider").value / 100;
+    document.getElementById("volume").textContent = document.querySelector("#slider").value + "%";
+    console.log("The current value is " + (document.querySelector("#slider").value / 100));
 });
+
 
 document.getElementById("vintage").addEventListener("click", function(){
 	console.log ("old school mode");
