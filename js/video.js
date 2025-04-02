@@ -43,24 +43,24 @@ document.querySelector("#skip").addEventListener("click", function(){
 document.querySelector("#mute").addEventListener("click", function(){
 	if (document.getElementById("player1").muted) {
 		console.log("video unmuted");
-		document.getElementById("player1").muted = true;
+		document.getElementById("player1").muted = false;
 		document.getElementById("mute").textContent = "Mute";
 	} 
 	else {
 		console.log("video muted");
-		document.getElementById("player1").muted = false;
+		document.getElementById("player1").muted = true;
 		document.getElementById("mute").textContent = "Unmute";
 	}
 });
 
-document.querySelector ("#slider").addEventListener("drag", function(){
+document.querySelector ("#slider").addEventListener("input", function(){
 	console.log("volume changed");
 	document.getElementById("volume").textContent = this.value+"%";
-	console.log(document.getElementById("volume").textContent = this.value+"%");
+	console.log("volume is at " + document.getElementById("volume").textContent);
 });
 
 document.getElementById("vintage").addEventListener("click", function(){
-	console.log ("old school mode")
+	console.log ("old school mode");
 	document.getElementById("player1").classList.add("oldSchool");
 });
 
