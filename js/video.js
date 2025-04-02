@@ -53,7 +53,7 @@ document.querySelector("#mute").addEventListener("click", function(){
 	}
 });
 
-document.querySelector ("#slider").addEventListener("input", function(){
+document.querySelector ("#slider").addEventListener("change", function(){
 	console.log("volume changed");
 	document.getElementById("volume").textContent = slider.value+"%";
 	console.log("The current value is " + (slider.value / 100));
